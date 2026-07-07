@@ -207,3 +207,34 @@ item.style.transition="1s";
 timelineObserver.observe(item);
 
 });
+// Certification Reveal
+
+const certs=document.querySelectorAll(".cert-card");
+
+const certObserver=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity=1;
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+certs.forEach(card=>{
+
+card.style.opacity=0;
+
+card.style.transform="translateY(60px)";
+
+card.style.transition=".8s";
+
+certObserver.observe(card);
+
+});

@@ -176,3 +176,34 @@ clearInterval(interval);
 }
 
 },180);
+// Timeline Reveal
+
+const timelineItems=document.querySelectorAll(".timeline-item");
+
+const timelineObserver=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity=1;
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+},{threshold:.2});
+
+timelineItems.forEach(item=>{
+
+item.style.opacity=0;
+
+item.style.transform="translateY(60px)";
+
+item.style.transition="1s";
+
+timelineObserver.observe(item);
+
+});

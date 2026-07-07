@@ -157,3 +157,22 @@ clearInterval(timer);
 }
 
 });
+// Experience Counter
+
+let counter=document.getElementById("expCounter");
+
+let c=0;
+
+let interval=setInterval(()=>{
+
+c++;
+
+counter.innerHTML=c+"+";
+
+if(c>=6){
+
+clearInterval(interval);
+
+}
+
+},180);

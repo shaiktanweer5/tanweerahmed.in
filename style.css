@@ -1696,17 +1696,35 @@ animation:load 2s ease;
 
 }
 
-.aws{width:95%;background:#ff9900;}
+.aws-progress{
+width:95%;
+background:#ff9900;
+}
 
-.gcp{width:90%;background:#34a853;}
+.gcp-progress{
+width:90%;
+background:#34A853;
+}
 
-.security{width:96%;background:#00ffd5;}
+.security-progress{
+width:96%;
+background:#00F7FF;
+}
 
-.terraform{width:92%;background:#7B42BC;}
+.terraform-progress{
+width:92%;
+background:#7B42BC;
+}
 
-.devops{width:82%;background:#1e88e5;}
+.devops-progress{
+width:82%;
+background:#1e88e5;
+}
 
-.linux{width:84%;background:#ffd43b;}
+.linux-progress{
+width:84%;
+background:#FFD43B;
+}
 
 @keyframes load{
 

@@ -126,56 +126,25 @@ glow.style.top=e.clientY+"px";
 
 });
 
-// ===== Counter Animation =====
-
-const cards=document.querySelectorAll(".card h2");
-
-cards.forEach(card=>{
-
-const txt=card.innerText;
-
-if(txt.includes("+")){
-
-let count=0;
-
-const end=parseInt(txt);
-
-const timer=setInterval(()=>{
-
-count++;
-
-card.innerText=count+"+";
-
-if(count>=end){
-
-clearInterval(timer);
-
-}
-
-},120);
-
-}
-
-});
 // Experience Counter
 
-let counter=document.getElementById("expCounter");
+const counter = document.getElementById("expCounter");
 
-let c=0;
+const end = parseInt(counter.textContent);
 
-let interval=setInterval(()=>{
+let current = 0;
 
-c++;
+const interval = setInterval(() => {
 
-counter.innerHTML=c+"+";
+    current++;
 
-if(c>=6){
+    counter.textContent = current + "+";
 
-clearInterval(interval);
+    if (current >= end) {
+        clearInterval(interval);
+    }
 
-}
-
-},180);
+}, 180);
 // Timeline Reveal
 
 const timelineItems=document.querySelectorAll(".timeline-item");

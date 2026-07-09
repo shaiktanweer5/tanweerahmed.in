@@ -188,7 +188,7 @@ align-items:center;
 
 gap:80px;
 
-padding:140px 10% 80px;
+padding:120px 8% 50px;
 
 min-height:90vh;
 position:relative;
@@ -217,8 +217,7 @@ z-index:5;
 
 .hero-left h1{
 
-font-size:76px;
-
+font-size:64px;
 font-weight:800;
 
 line-height:1.05;
@@ -249,7 +248,7 @@ line-height:1.8;
 
 color:#bfc9da;
 
-max-width:650px;
+max-width:560px;
 
 }
 
@@ -398,7 +397,7 @@ STATS
 
     background:#101c2f;
 
-    padding:35px;
+   padding:25px;
 
     border-radius:18px;
 
@@ -542,7 +541,7 @@ background:linear-gradient(90deg,#ffffff,#60a5fa,#06b6d4);
 
 -webkit-text-fill-color:transparent;
 
-animation:textGlow 4s infinite;
+animation:none;
 
 }
 
@@ -779,9 +778,8 @@ Mouse Glow
 
 position:fixed;
 
-width:300px;
-
-height:300px;
+width:180px;
+height:180px;
 
 background:radial-gradient(circle,rgba(59,130,246,.18),transparent);
 

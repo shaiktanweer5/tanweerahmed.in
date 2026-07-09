@@ -40,9 +40,9 @@ top:-30%;
 
 left:-20%;
 
-width:700px;
+width:500px;
 
-height:700px;
+height:500px;
 
 background:radial-gradient(circle,#2563eb55,transparent 70%);
 
@@ -135,6 +135,7 @@ nav{
     background:rgba(10,18,32,.6);
 
     z-index:1000;
+   box-shadow:0 5px 20px rgba(0,0,0,.25);
 
 }
 
@@ -996,7 +997,17 @@ text-align:right;
 left:50%;
 
 }
+.timeline-card{
 
+transition:.4s;
+
+}
+
+.timeline-card:hover{
+
+transform:translateY(-8px) scale(1.02);
+
+}
 .timeline-card{
 
 background:rgba(255,255,255,.05);

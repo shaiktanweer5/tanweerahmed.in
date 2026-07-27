@@ -1060,6 +1060,23 @@ font-size:24px;
 color:white;
 
 }
+.cert-level{
+
+display:inline-block;
+
+padding:6px 16px;
+
+border-radius:30px;
+
+background:#1d4ed8;
+
+font-size:13px;
+
+font-weight:600;
+
+margin-bottom:18px;
+
+}
 
 .aws-logo{
 
@@ -1098,6 +1115,41 @@ line-height:26px;
 color:#cfd5df;
 
 margin-bottom:22px;
+
+}
+.cert-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:100%;
+
+padding:14px;
+
+border-radius:12px;
+
+margin-top:18px;
+
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.cert-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 30px rgba(37,99,235,.35);
 
 }
 .cert-btn{

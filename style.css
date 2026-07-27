@@ -2346,3 +2346,29 @@ box-shadow:0 0 20px rgba(0,255,255,.35);
         margin-top: 40px;
     }
 }
+nav {
+    padding: 0 4%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+nav ul li a {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 650px;
+}
+
+.hero-buttons a {
+    padding: 13px 20px;
+    white-space: nowrap;
+}

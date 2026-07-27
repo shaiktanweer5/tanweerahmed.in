@@ -785,20 +785,14 @@ left:50%;
 
 }
 
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(18px);
-
-padding:30px;
-
-border-radius:20px;
-
-border:1px solid rgba(255,255,255,.08);
-
-transition:.4s;
-
-box-shadow:0 20px 40px rgba(0,0,0,.2);
-
+.timeline-card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(18px);
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.4s;
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
 }
 
 .timeline-card:hover{

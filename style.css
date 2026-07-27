@@ -2310,3 +2310,39 @@ transform:translateY(-4px);
 box-shadow:0 0 20px rgba(0,255,255,.35);
 
 }
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 120px 8% 60px;
+}
+
+.hero-left {
+    width: 55%;
+}
+
+.hero-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-right {
+        margin-top: 40px;
+    }
+}

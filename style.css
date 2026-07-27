@@ -958,55 +958,42 @@ CERTIFICATIONS
 
 .cert-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,300px));
+    grid-template-columns:repeat(3,minmax(230px,290px));
     justify-content:center;
-    gap:28px;
-    margin-top:60px;
+    gap:26px;
+    margin-top:50px;
 }
 
 .cert-card{
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(255,255,255,.08);
-
-backdrop-filter:blur(15px);
-
-border-radius:24px;
-
-padding:28px;
-
-width:100%;
-
-max-width:300px;
-
-min-height:360px;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-justify-content:space-between;
-
-transition:.4s;
-
-position:relative;
-
-overflow:hidden;
-
+    width:100%;
+    min-height:340px;
+    padding:28px 24px;
+    border-radius:24px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.065),
+            rgba(255,255,255,.025)
+        );
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(18px);
+    position:relative;
+    overflow:hidden;
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
 }
 .cert-card:hover{
-
-transform:translateY(-8px) scale(1.02);
-
-box-shadow:
-
-0 20px 45px rgba(37,99,235,.25),
-
-0 0 50px rgba(6,182,212,.12);
-
+    transform:translateY(-8px);
+    border-color:rgba(96,165,250,.45);
+    box-shadow:
+        0 22px 50px rgba(0,0,0,.35),
+        0 0 35px rgba(37,99,235,.14);
 }
 
 .cert-card::before{
@@ -1036,29 +1023,17 @@ left:120%;
 }
 
 .cert-logo{
-
-width:100px;
-
-height:100px;
-
-margin:auto;
-
-margin-bottom:20px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-weight:700;
-
-font-size:24px;
-
-color:white;
-
+    width:78px;
+    height:78px;
+    margin:0 auto 20px;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:800;
+    color:white;
+    box-shadow:0 14px 30px rgba(0,0,0,.25);
 }
 .cert-level{
 
@@ -1095,7 +1070,78 @@ background:#0078D4;
 background:#34A853;
 
 }
+.microsoft-logo{
+    background:linear-gradient(135deg,#0078d4,#2563eb);
+}
 
+.terraform-logo{
+    background:linear-gradient(135deg,#5c4ee5,#844fba);
+}
+.cert-level{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 14px;
+    margin-bottom:15px;
+    border-radius:30px;
+    background:rgba(37,99,235,.16);
+    border:1px solid rgba(96,165,250,.25);
+    color:#93c5fd;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.4px;
+    text-transform:uppercase;
+}
+
+.expert-level{
+    background:rgba(168,85,247,.16);
+    border-color:rgba(192,132,252,.3);
+    color:#d8b4fe;
+}
+
+.cert-card h3{
+    min-height:60px;
+    margin:0 0 12px;
+    font-size:19px;
+    line-height:1.5;
+    color:#f8fafc;
+}
+
+.cert-code{
+    margin:0 0 8px;
+    color:#67e8f9;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.cert-provider{
+    margin:0 0 22px;
+    color:#9ca3af;
+    font-size:13px;
+}
+
+.cert-btn{
+    width:100%;
+    margin-top:auto;
+    padding:11px 16px;
+    border-radius:11px;
+    border:1px solid rgba(96,165,250,.35);
+    background:rgba(37,99,235,.12);
+    color:#bfdbfe;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.cert-btn:hover{
+    background:linear-gradient(135deg,#2563eb,#0891b2);
+    border-color:transparent;
+    color:white;
+    transform:translateY(-2px);
+    box-shadow:0 10px 24px rgba(37,99,235,.3);
+}
 .cert-card h3{
 
 font-size:22px;
@@ -1183,25 +1229,7 @@ transform:translateY(-4px);
 box-shadow:0 10px 25px rgba(37,99,235,.35);
 
 }
-.coming{
 
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-}
-
-.coming h2{
-
-font-size:70px;
-
-color:#60a5fa;
-
-}
 /*==========================
 Responsive
 ===========================*/
@@ -1990,6 +2018,26 @@ nav ul li a {
     .education-grid,
     .expertise-grid{
         grid-template-columns:1fr;
+    }
+
+}
+@media(max-width:1000px){
+
+    .cert-grid{
+        grid-template-columns:repeat(2,minmax(240px,300px));
+    }
+
+}
+
+@media(max-width:620px){
+
+    .cert-grid{
+        grid-template-columns:minmax(0,320px);
+        gap:22px;
+    }
+
+    .cert-card{
+        min-height:320px;
     }
 
 }

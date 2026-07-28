@@ -289,12 +289,6 @@ box-shadow:
 }
 
 /* ===========================
-PROFILE CARD
-===========================*/
-
-
-
-/* ===========================
 SECTION
 ===========================*/
 
@@ -1834,158 +1828,7 @@ nav ul li a {
     }
 
 }
-/* =====================================
-PROFESSIONAL HERO PROFILE CARD
-===================================== */
 
-.hero-right {
-    flex: .8;
-    min-width: 360px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 5;
-}
-
-.profile-card {
-    width: 360px;
-    padding: 14px;
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.03)
-    );
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    box-shadow:
-        0 25px 60px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-
-    transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
-
-    overflow: hidden;
-}
-
-.profile-card:hover {
-    transform: translateY(-8px);
-
-    border-color: rgba(74, 169, 255, 0.4);
-
-    box-shadow:
-        0 32px 75px rgba(0, 0, 0, 0.42),
-        0 0 35px rgba(74, 169, 255, 0.12);
-}
-
-.profile-image-frame {
-    width: 100%;
-    height: 390px;
-
-    border-radius: 17px;
-    overflow: hidden;
-
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.profile-image-frame .profile-photo {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center top;
-
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-.profile-card-content {
-    padding: 20px 10px 10px;
-}
-
-.profile-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-
-    margin-bottom: 12px;
-
-    color: rgba(255, 255, 255, 0.7);
-
-    font-size: 13px;
-    font-weight: 500;
-}
-
-.status-dot {
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-
-    background: #45d483;
-
-    box-shadow: 0 0 0 5px rgba(69, 212, 131, 0.12);
-}
-
-.profile-card-content h3 {
-    margin: 0;
-
-    color: white;
-
-    font-size: 25px;
-    font-weight: 700;
-}
-
-.profile-card-content p {
-    margin: 7px 0 0;
-
-    color: rgba(255, 255, 255, 0.62);
-
-    font-size: 14px;
-}
-
-/* Mobile */
-
-@media (max-width: 900px) {
-.hero-right {
-    min-width: 0;
-    width: 100%;
-}
-
-    .profile-card {
-        width: min(360px, 92vw);
-        margin-top: 30px;
-    }
-
-}
-
-@media (max-width: 480px) {
-
-    .profile-card {
-        padding: 10px;
-        border-radius: 20px;
-    }
-
-    .profile-image-frame {
-        height: 350px;
-        border-radius: 14px;
-    }
-
-    .profile-card-content {
-        padding: 17px 8px 8px;
-    }
-
-}
 /* ===========================
 SIMPLE ROUND PROFILE PHOTO
 =========================== */
@@ -1993,36 +1836,37 @@ SIMPLE ROUND PROFILE PHOTO
 .hero-right {
     flex: 0.8;
     min-width: 380px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     position: relative;
     z-index: 5;
 }
 
-.hero-right .profile-photo {
-    width: 390px;
-    height: 390px;
-
+.profile-circle {
+    width: 380px;
+    height: 380px;
     border-radius: 50%;
-
-    object-fit: cover;
-    object-position: center top;
-
-    border: none;
-    outline: none;
-
-    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
-
-    display: block;
-
-    transition: transform 0.35s ease;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: transparent;
 }
 
-.hero-right .profile-photo:hover {
-    transform: translateY(-6px);
+.profile-circle .profile-photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 18%;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    background: transparent;
+    transform: none;
+    animation: none;
 }
 
 @media (max-width: 900px) {
@@ -2032,18 +1876,18 @@ SIMPLE ROUND PROFILE PHOTO
         min-width: 0;
     }
 
-    .hero-right .profile-photo {
-        width: 320px;
-        height: 320px;
+    .profile-circle {
+        width: 310px;
+        height: 310px;
     }
 
 }
 
 @media (max-width: 480px) {
 
-    .hero-right .profile-photo {
-        width: 250px;
-        height: 250px;
+    .profile-circle {
+        width: 245px;
+        height: 245px;
     }
 
 }

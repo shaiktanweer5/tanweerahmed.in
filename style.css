@@ -1986,3 +1986,64 @@ PROFESSIONAL HERO PROFILE CARD
     }
 
 }
+/* ===========================
+SIMPLE ROUND PROFILE PHOTO
+=========================== */
+
+.hero-right {
+    flex: 0.8;
+    min-width: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 5;
+}
+
+.hero-right .profile-photo {
+    width: 390px;
+    height: 390px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border: none;
+    outline: none;
+
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+
+    display: block;
+
+    transition: transform 0.35s ease;
+}
+
+.hero-right .profile-photo:hover {
+    transform: translateY(-6px);
+}
+
+@media (max-width: 900px) {
+
+    .hero-right {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-right .profile-photo {
+        width: 320px;
+        height: 320px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero-right .profile-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+}

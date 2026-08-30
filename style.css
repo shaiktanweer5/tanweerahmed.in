@@ -2079,3 +2079,30 @@ CLOUD WITH TANWEER SERIES
 
 }
 }
+/* Cloud with Tanweer - Two Card Layout */
+
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+    margin-top: 40px;
+}
+
+.series-grid .series-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.series-grid .series-buttons {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .series-grid {
+        grid-template-columns: 1fr;
+    }
+}

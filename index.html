@@ -769,129 +769,511 @@ NMIMS, Mumbai
 
 </section>
 
-    <!--==========================
-PROJECTS
-===========================-->
+    <!-- =========================
+FEATURED ARCHITECTURE PROJECTS
+========================= -->
 
 <section id="projects">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<h5>PORTFOLIO</h5>
+        <h5>ARCHITECTURE • SECURITY • CLOUD ENGINEERING</h5>
 
-<h2>Featured Projects</h2>
+        <h2>Featured Projects & Case Studies</h2>
 
-<p class="subtitle">
+        <p class="subtitle">
+            Independent reference architectures and sanitized cloud engineering
+            case studies demonstrating how I approach real-world architecture,
+            security, migration and automation challenges.
+        </p>
 
-Some enterprise cloud solutions, automation initiatives and security implementations I have worked on.
+    </div>
 
-</p>
 
-</div>
+    <div class="featured-projects">
 
-<div class="project-grid">
 
-<div class="project-card">
+        <!-- =========================
+        PROJECT 1 - WIZ
+        ========================= -->
 
-<div class="project-image">
+        <article class="case-study-card featured-case">
 
-<img src="images/project1.jpg" alt="Landing Zone">
+            <div class="case-study-top">
 
-</div>
+                <div>
+                    <span class="project-label">
+                        ⭐ FEATURED CLOUD SECURITY PROJECT
+                    </span>
 
-<div class="project-content">
+                    <h3>
+                        Enterprise Cloud Security with Wiz CNAPP
+                    </h3>
 
-<h3>Enterprise Landing Zone</h3>
+                    <p class="project-intro">
+                        How can an enterprise understand and prioritize security
+                        risks when infrastructure is spread across AWS, Azure
+                        and Google Cloud?
+                    </p>
+                </div>
 
-<p>
+                <div class="project-number">
+                    01
+                </div>
 
-Designed scalable AWS Landing Zones using Terraform,
-network segmentation, IAM best practices and security guardrails.
+            </div>
 
-</p>
 
-<div class="project-tags">
+            <div class="project-story">
 
-<span>AWS</span>
+                <div class="story-block">
 
-<span>Terraform</span>
+                    <span class="story-title">THE CHALLENGE</span>
 
-<span>IAM</span>
+                    <p>
+                        Modern enterprises may operate hundreds of cloud accounts,
+                        subscriptions and projects. Security teams need visibility
+                        into exposed resources, vulnerabilities, excessive
+                        permissions and configuration risks without manually
+                        investigating every cloud environment.
+                    </p>
 
-</div>
+                </div>
 
-</div>
 
-</div>
+                <div class="story-block">
 
-<div class="project-card">
+                    <span class="story-title">THE APPROACH</span>
 
-<div class="project-image">
+                    <p>
+                        This reference project demonstrates how a CNAPP platform
+                        such as Wiz can provide centralized cloud visibility,
+                        correlate different risk factors and help engineering
+                        teams prioritize security issues based on context.
+                    </p>
 
-<img src="images/project2.jpg" alt="Cloud Security">
+                </div>
 
-</div>
 
-<div class="project-content">
+                <div class="story-block">
 
-<h3>Cloud Security Assessment</h3>
+                    <span class="story-title">WHY IT MATTERS</span>
 
-<p>
+                    <p>
+                        Cloud security is not simply about finding more alerts.
+                        The real challenge is understanding which combination of
+                        exposure, vulnerability, identity and data access creates
+                        meaningful business risk.
+                    </p>
 
-Performed enterprise cloud security posture assessments using WIZ and implemented remediation strategies.
+                </div>
 
-</p>
+            </div>
 
-<div class="project-tags">
 
-<span>WIZ</span>
+            <div class="architecture-preview">
 
-<span>Security</span>
+<pre>
+AWS ───────┐
+           │
+Azure ─────┼────→  WIZ CNAPP
+           │             │
+GCP ───────┘             ↓
+                  Security Context
+                         ↓
+          Exposure • IAM • Vulnerabilities
+                         ↓
+                  Risk Prioritization
+                         ↓
+                     Remediation
+</pre>
 
-<span>Cloud</span>
+            </div>
 
-</div>
 
-</div>
+            <div class="project-scenario">
 
-</div>
+                <span class="story-title">EXAMPLE SECURITY SCENARIO</span>
 
-<div class="project-card">
+                <div class="scenario-flow">
 
-<div class="project-image">
+                    <span>🌐 Internet Exposure</span>
 
-<img src="images/project3.jpg" alt="Migration">
+                    <b>→</b>
 
-</div>
+                    <span>🖥 Vulnerable Workload</span>
 
-<div class="project-content">
+                    <b>→</b>
 
-<h3>Multi-Cloud Migration</h3>
+                    <span>🔑 Powerful IAM Role</span>
 
-<p>
+                    <b>→</b>
 
-Migrated workloads across multiple cloud providers with automation, monitoring and zero downtime planning.
+                    <span>🗄 Sensitive Data</span>
 
-</p>
+                </div>
 
-<div class="project-tags">
+                <p>
+                    Instead of treating these as unrelated findings, contextual
+                    analysis helps identify the complete attack path and prioritize
+                    the remediation.
+                </p>
 
-<span>AWS</span>
+            </div>
 
-<span>Azure</span>
 
-<span>GCP</span>
+            <div class="project-tags">
 
-</div>
+                <span>Wiz</span>
+                <span>CNAPP</span>
+                <span>AWS</span>
+                <span>Azure</span>
+                <span>Google Cloud</span>
+                <span>CSPM</span>
+                <span>CIEM</span>
+                <span>IAM</span>
 
-</div>
+            </div>
 
-</div>
 
-</div>
+            <div class="project-actions">
+
+                <a href="projects/wiz-cnapp.html"
+                   class="primary project-btn">
+                    Explore Case Study →
+                </a>
+
+                <a href="https://github.com/shaiktanweer5"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="secondary project-btn">
+                    GitHub ↗
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+        PROJECT 2 - AWS LANDING ZONE
+        ========================= -->
+
+        <article class="case-study-card">
+
+            <div class="case-study-top">
+
+                <div>
+
+                    <span class="project-label">
+                        ☁️ CLOUD ARCHITECTURE
+                    </span>
+
+                    <h3>
+                        Secure AWS Enterprise Landing Zone
+                    </h3>
+
+                    <p class="project-intro">
+                        Designing the secure cloud foundation needed when an
+                        organization grows from a few AWS accounts to an
+                        enterprise multi-account environment.
+                    </p>
+
+                </div>
+
+                <div class="project-number">
+                    02
+                </div>
+
+            </div>
+
+
+            <div class="project-story">
+
+                <div class="story-block">
+
+                    <span class="story-title">THE CHALLENGE</span>
+
+                    <p>
+                        As organizations scale, separate teams create development,
+                        production, security and shared-service environments.
+                        Without governance, cloud environments quickly become
+                        difficult to control.
+                    </p>
+
+                </div>
+
+
+                <div class="story-block">
+
+                    <span class="story-title">THE SOLUTION</span>
+
+                    <p>
+                        Build a standardized AWS foundation using account
+                        separation, organizational units, security guardrails,
+                        centralized logging and Infrastructure as Code.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="architecture-mini">
+
+<pre>
+              AWS ORGANIZATION
+                     │
+     ┌───────────────┼───────────────┐
+     ↓               ↓               ↓
+  Security       Workloads        Sandbox
+     │               │
+ Audit + Logs      Dev / Prod
+                     │
+                  Guardrails
+</pre>
+
+            </div>
+
+
+            <div class="project-tags">
+
+                <span>AWS</span>
+                <span>Organizations</span>
+                <span>SCP</span>
+                <span>IAM</span>
+                <span>CloudTrail</span>
+                <span>Terraform</span>
+
+            </div>
+
+
+            <div class="project-actions">
+
+                <a href="projects/aws-landing-zone.html"
+                   class="primary project-btn">
+                    Explore Architecture →
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+        PROJECT 3 - AWS TO AZURE
+        ========================= -->
+
+        <article class="case-study-card">
+
+            <div class="case-study-top">
+
+                <div>
+
+                    <span class="project-label">
+                        🔄 CLOUD TRANSFORMATION
+                    </span>
+
+                    <h3>
+                        AWS → Azure Enterprise Migration
+                    </h3>
+
+                    <p class="project-intro">
+                        A reference migration strategy showing how existing AWS
+                        workloads can be assessed, mapped, secured and migrated
+                        into Microsoft Azure.
+                    </p>
+
+                </div>
+
+                <div class="project-number">
+                    03
+                </div>
+
+            </div>
+
+
+            <div class="migration-map">
+
+                <div>
+                    <strong>AWS</strong>
+                    <span>VPC</span>
+                    <span>EC2</span>
+                    <span>S3</span>
+                    <span>IAM</span>
+                    <span>Security Groups</span>
+                </div>
+
+                <div class="migration-arrow">
+                    →
+                </div>
+
+                <div>
+                    <strong>AZURE</strong>
+                    <span>VNet</span>
+                    <span>Azure VM</span>
+                    <span>Blob Storage</span>
+                    <span>Entra ID / RBAC</span>
+                    <span>NSG</span>
+                </div>
+
+            </div>
+
+
+            <div class="project-process">
+
+                <span>Assess</span>
+                <b>→</b>
+                <span>Map</span>
+                <b>→</b>
+                <span>Design</span>
+                <b>→</b>
+                <span>Secure</span>
+                <b>→</b>
+                <span>Migrate</span>
+                <b>→</b>
+                <span>Validate</span>
+
+            </div>
+
+
+            <div class="project-tags">
+
+                <span>AWS</span>
+                <span>Azure</span>
+                <span>Migration</span>
+                <span>Networking</span>
+                <span>IAM</span>
+                <span>Terraform</span>
+
+            </div>
+
+
+            <div class="project-actions">
+
+                <a href="projects/aws-to-azure-migration.html"
+                   class="primary project-btn">
+                    View Migration Strategy →
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+        SMALLER PROJECTS
+        ========================= -->
+
+        <div class="lab-heading">
+
+            <span>ENGINEERING LABS</span>
+
+            <h3>
+                Additional Hands-On Projects
+            </h3>
+
+            <p>
+                Smaller implementations focused on individual cloud,
+                infrastructure and security concepts.
+            </p>
+
+        </div>
+
+
+        <div class="lab-grid">
+
+
+            <div class="lab-card">
+
+                <span class="lab-icon">🏗️</span>
+
+                <h4>
+                    Secure Three-Tier AWS Architecture
+                </h4>
+
+                <p>
+                    Highly available application architecture using public and
+                    private networking, load balancing and protected database
+                    tiers.
+                </p>
+
+                <div class="project-tags">
+                    <span>AWS</span>
+                    <span>VPC</span>
+                    <span>ALB</span>
+                    <span>RDS</span>
+                </div>
+
+            </div>
+
+
+            <div class="lab-card">
+
+                <span class="lab-icon">⚙️</span>
+
+                <h4>
+                    Terraform Infrastructure Automation
+                </h4>
+
+                <p>
+                    Reusable Infrastructure as Code patterns for deploying secure
+                    and repeatable cloud environments.
+                </p>
+
+                <div class="project-tags">
+                    <span>Terraform</span>
+                    <span>IaC</span>
+                    <span>AWS</span>
+                </div>
+
+            </div>
+
+
+            <div class="lab-card">
+
+                <span class="lab-icon">🔐</span>
+
+                <h4>
+                    Cloud IAM Security
+                </h4>
+
+                <p>
+                    Identity architecture exploring least privilege, roles,
+                    federation and access governance.
+                </p>
+
+                <div class="project-tags">
+                    <span>IAM</span>
+                    <span>RBAC</span>
+                    <span>Security</span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="portfolio-disclaimer">
+
+            <strong>Portfolio Note</strong>
+
+            <p>
+                These projects are independently created reference architectures
+                and sanitized technical labs. They are designed to demonstrate
+                architecture and engineering concepts and contain no confidential
+                client information, proprietary code or employer assets.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
-
     <!-- =========================
 BLOGS
 ========================= -->

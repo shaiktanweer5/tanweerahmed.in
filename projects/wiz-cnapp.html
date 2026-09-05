@@ -1,1 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wiz CNAPP Cloud Security Case Study | Tanweer Ahmed</title>
+
+    <meta name="description"
+          content="A sanitized cloud security portfolio case study demonstrating Wiz CNAPP, CSPM, CIEM, vulnerability management, attack path analysis and multi-cloud security across AWS, Azure and Google Cloud.">
+
+    <link rel="stylesheet" href="../style.css?v=6">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+
+<body>
+
+<div id="stars"></div>
+<div id="cursor-glow"></div>
+
+
+<!-- =========================
+NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">Tanweer Ahmed</div>
+
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#blogs">Blogs</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+PROJECT HERO
+========================= -->
+
+<section class="project-detail-hero">
+
+    <div class="project-detail-container">
+
+        <span class="project-label">
+            🛡 CLOUD SECURITY • CNAPP • MULTI-CLOUD
+        </span>
+
+        <h1>
+            Enterprise Cloud Security
+            <span>with Wiz CNAPP</span>
+        </h1>
+
+        <p class="project-detail-lead">
+            A sanitized portfolio case study exploring how Wiz CNAPP
+            can help security teams discover, correlate and prioritize
+            cloud risks across AWS, Microsoft Azure and Google Cloud.
+        </p>
+
+        <div class="project-tags">
+
+            <span>Wiz</span>
+            <span>CNAPP</span>
+            <span>CSPM</span>
+            <span>CIEM</span>
+            <span>AWS</span>
+            <span>Azure</span>
+            <span>Google Cloud</span>
+            <span>IAM</span>
+            <span>Vulnerability Management</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+PORTFOLIO DISCLAIMER
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <div class="portfolio-disclaimer">
+
+            <strong>
+                Independent & Sanitized Portfolio Case Study
+            </strong>
+
+            <p>
+                This reference architecture is independently created to
+                demonstrate cloud-security concepts and Wiz CNAPP workflows.
+                It contains no client information, employer architecture,
+                proprietary code, account details or confidential
+                security findings.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+THE BUSINESS PROBLEM
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">01 • THE PROBLEM</span>
+
+        <h2>
+            Securing a Large Multi-Cloud Environment
+        </h2>
+
+        <p>
+            Imagine an enterprise operating dozens of AWS accounts,
+            Microsoft Azure subscriptions and Google Cloud projects.
+            Thousands of cloud resources are continuously created,
+            modified and removed by different engineering teams.
+        </p>
+
+        <p>
+            Security teams need visibility into questions such as:
+        </p>
+
+        <div class="project-question-grid">
+
+            <div class="project-question-card">
+                🌐 Which workloads are exposed to the internet?
+            </div>
+
+            <div class="project-question-card">
+                🐞 Which systems contain critical vulnerabilities?
+            </div>
+
+            <div class="project-question-card">
+                🔑 Which identities have excessive permissions?
+            </div>
+
+            <div class="project-question-card">
+                🗄 Which resources can access sensitive data?
+            </div>
+
+            <div class="project-question-card">
+                ⚠️ Which cloud configurations create security risk?
+            </div>
+
+            <div class="project-question-card">
+                🎯 Which findings should security teams fix first?
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+WHAT IS WIZ
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">02 • THE PLATFORM</span>
+
+        <h2>What is Wiz CNAPP?</h2>
+
+        <p>
+            Wiz is a Cloud Native Application Protection Platform (CNAPP)
+            that provides security visibility across cloud environments.
+        </p>
+
+        <p>
+            Instead of looking at vulnerabilities, identities,
+            configurations and exposure completely independently,
+            contextual cloud-security analysis can help security teams
+            understand how multiple risks may combine into a more
+            significant attack path.
+        </p>
+
+
+        <div class="wiz-capability-grid">
+
+            <div class="wiz-capability-card">
+                <h3>☁️ CSPM</h3>
+                <p>Cloud configuration and security posture visibility.</p>
+            </div>
+
+            <div class="wiz-capability-card">
+                <h3>🔑 CIEM</h3>
+                <p>Cloud identity, permissions and entitlement risk.</p>
+            </div>
+
+            <div class="wiz-capability-card">
+                <h3>🐞 Vulnerabilities</h3>
+                <p>Workload and software vulnerability visibility.</p>
+            </div>
+
+            <div class="wiz-capability-card">
+                <h3>🎯 Attack Paths</h3>
+                <p>Understanding combinations of risks and exposure.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+ARCHITECTURE
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">03 • ARCHITECTURE</span>
+
+        <h2>Conceptual Multi-Cloud Architecture</h2>
+
+        <p>
+            The following simplified architecture represents a fictional
+            enterprise connecting multiple cloud environments to a
+            centralized cloud-security platform.
+        </p>
+
+
+        <div class="architecture-preview">
+
+<pre>
+                    ENTERPRISE CLOUD
+
+        AWS              AZURE               GCP
+         │                 │                  │
+   Organizations      Subscriptions        Projects
+         │                 │                  │
+   EC2 • S3 • IAM     VM • Storage       GCE • GCS
+   EKS • RDS          AKS • SQL          GKE • SQL
+         │                 │                  │
+         └─────────────────┼──────────────────┘
+                           │
+                           ▼
+                       WIZ CNAPP
+                           │
+        ┌──────────────────┼──────────────────┐
+        ▼                  ▼                  ▼
+       CSPM               CIEM        Vulnerabilities
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           ▼
+                   Security Context
+                           │
+                           ▼
+                  Attack Path Analysis
+                           │
+                           ▼
+                   Risk Prioritization
+                           │
+                           ▼
+                      Remediation
+</pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+SECURITY WORKFLOW
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">04 • SECURITY WORKFLOW</span>
+
+        <h2>How I Approach Wiz Cloud Security</h2>
+
+        <div class="project-process">
+
+            <span>Cloud Onboarding</span>
+            <b>→</b>
+
+            <span>Asset Visibility</span>
+            <b>→</b>
+
+            <span>Security Findings</span>
+            <b>→</b>
+
+            <span>Risk Context</span>
+            <b>→</b>
+
+            <span>Investigation</span>
+            <b>→</b>
+
+            <span>Remediation</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+ATTACK PATH
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">05 • INVESTIGATION SCENARIO</span>
+
+        <h2>
+            From Individual Findings to an Attack Path
+        </h2>
+
+        <p>
+            A vulnerability by itself may not always represent the
+            organization's highest-priority risk. Context changes the
+            security picture.
+        </p>
+
+        <p>
+            Consider this fictional scenario:
+        </p>
+
+
+        <div class="attack-path-flow">
+
+            <div class="attack-node">
+                🌐
+                <strong>Internet Exposure</strong>
+                <small>Publicly reachable workload</small>
+            </div>
+
+            <div class="attack-arrow">↓</div>
+
+            <div class="attack-node">
+                🐞
+                <strong>Critical Vulnerability</strong>
+                <small>Exploitable software weakness</small>
+            </div>
+
+            <div class="attack-arrow">↓</div>
+
+            <div class="attack-node">
+                🔑
+                <strong>Powerful IAM Role</strong>
+                <small>Excessive cloud permissions</small>
+            </div>
+
+            <div class="attack-arrow">↓</div>
+
+            <div class="attack-node">
+                🗄
+                <strong>Sensitive Data Access</strong>
+                <small>Access to a critical data resource</small>
+            </div>
+
+        </div>
+
+
+        <div class="project-insight">
+
+            <strong>Security Insight</strong>
+
+            <p>
+                Looking at these findings independently may create four
+                separate alerts. Looking at them together reveals a
+                potential path from internet exposure to sensitive data.
+                This context helps security teams prioritize remediation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+SKILLS DEMONSTRATED
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">06 • SKILLS DEMONSTRATED</span>
+
+        <h2>Cloud Security Capabilities</h2>
+
+        <div class="project-question-grid">
+
+            <div class="project-question-card">
+                Wiz CNAPP Administration
+            </div>
+
+            <div class="project-question-card">
+                Cloud Security Posture Management
+            </div>
+
+            <div class="project-question-card">
+                Identity & Permission Risk
+            </div>
+
+            <div class="project-question-card">
+                Vulnerability Management
+            </div>
+
+            <div class="project-question-card">
+                Attack Path Investigation
+            </div>
+
+            <div class="project-question-card">
+                Multi-Cloud Security
+            </div>
+
+            <div class="project-question-card">
+                Risk Prioritization
+            </div>
+
+            <div class="project-question-card">
+                Security Remediation
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+COMING NEXT
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <div class="project-insight">
+
+            <strong>Next: Technical Deep Dive</strong>
+
+            <p>
+                This case study will be expanded with detailed sections
+                covering cloud onboarding, CSPM findings, IAM/CIEM analysis,
+                vulnerability investigation, Kubernetes security,
+                compliance and remediation workflows.
+            </p>
+
+        </div>
+
+
+        <div class="project-actions">
+
+            <a href="../index.html#projects"
+               class="primary project-btn">
+                ← Back to Projects
+            </a>
+
+            <a href="https://github.com/shaiktanweer5"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="secondary project-btn">
+                GitHub ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 Tanweer Ahmed • Cloud Architecture & Security
+</footer>
+
+
+<script src="../script.js"></script>
+
+</body>
+
+</html>

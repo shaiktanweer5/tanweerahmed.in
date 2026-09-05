@@ -1347,197 +1347,312 @@ Remediation
 
 
 
-        <!-- =====================================================
+       <!-- =====================================================
+ARCHITECTURE & ENGINEERING LABS
+====================================================== -->
+
+<div class="lab-heading">
+
+    <span>
         ARCHITECTURE & ENGINEERING LABS
-        ====================================================== -->
+    </span>
 
-        <div class="lab-heading">
+    <h3>
+        Reference Architectures & Hands-On Labs
+    </h3>
 
-            <span>
-                ARCHITECTURE & ENGINEERING LABS
-            </span>
+    <p>
+        Independent architecture designs and technical labs exploring
+        secure cloud patterns, Infrastructure as Code, networking,
+        identity and modern enterprise architecture concepts.
+    </p>
 
-            <h3>
-                Reference Architectures & Hands-On Labs
-            </h3>
-
-            <p>
-                Independent architecture designs and technical labs
-                exploring secure cloud patterns, Infrastructure as Code,
-                networking and modern enterprise architecture concepts.
-            </p>
-
-        </div>
+</div>
 
 
+<div class="lab-grid">
 
-        <div class="lab-grid">
 
+    <!-- =========================================
+    LAB 01 - THREE TIER AWS
+    ========================================== -->
 
-            <!-- THREE TIER ARCHITECTURE -->
+    <article class="lab-card">
 
-            <div class="lab-card">
+        <div class="case-study-top">
 
-                <span class="lab-icon">
-                    🏗️
+            <div>
+
+                <span class="project-label">
+                    AWS REFERENCE ARCHITECTURE
                 </span>
 
                 <h4>
                     Secure Three-Tier AWS Architecture
                 </h4>
 
-                <p>
-                    A secure and highly available reference architecture
-                    separating web, application and database workloads
-                    across controlled network tiers using load balancing,
-                    private subnets and least-privilege communication.
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>AWS</span>
-                    <span>VPC</span>
-                    <span>ALB</span>
-                    <span>EC2</span>
-                    <span>RDS</span>
-
-                </div>
-
             </div>
 
+            <div class="project-number">
+                01
+            </div>
+
+        </div>
 
 
-            <!-- TERRAFORM -->
+        <p>
+            A secure and highly available AWS reference architecture
+            separating web, application and database workloads across
+            controlled network tiers using load balancing, private
+            subnets and least-privilege communication.
+        </p>
 
-            <div class="lab-card">
 
-                <span class="lab-icon">
-                    ⚙️
+        <div class="project-process">
+
+            <span>Internet</span>
+            <b>→</b>
+            <span>ALB</span>
+            <b>→</b>
+            <span>Application</span>
+            <b>→</b>
+            <span>Database</span>
+
+        </div>
+
+
+        <div class="project-tags">
+
+            <span>AWS</span>
+            <span>VPC</span>
+            <span>ALB</span>
+            <span>EC2</span>
+            <span>RDS</span>
+            <span>Private Subnets</span>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =========================================
+    LAB 02 - TERRAFORM
+    ========================================== -->
+
+    <article class="lab-card">
+
+        <div class="case-study-top">
+
+            <div>
+
+                <span class="project-label">
+                    INFRASTRUCTURE AS CODE
                 </span>
 
                 <h4>
                     Terraform Infrastructure Automation
                 </h4>
 
-                <p>
-                    Reusable Infrastructure as Code patterns for building
-                    repeatable cloud environments while improving
-                    consistency, automation and deployment reliability.
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>Terraform</span>
-                    <span>Infrastructure as Code</span>
-                    <span>AWS</span>
-                    <span>Azure</span>
-
-                </div>
-
             </div>
 
+            <div class="project-number">
+                02
+            </div>
+
+        </div>
 
 
-            <!-- ZERO TRUST -->
+        <p>
+            Reusable Infrastructure as Code patterns for building
+            repeatable cloud environments while improving consistency,
+            automation, governance and deployment reliability.
+        </p>
 
-            <div class="lab-card">
 
-                <span class="lab-icon">
-                    🔐
+        <div class="project-process">
+
+            <span>Code</span>
+            <b>→</b>
+            <span>Plan</span>
+            <b>→</b>
+            <span>Review</span>
+            <b>→</b>
+            <span>Apply</span>
+
+        </div>
+
+
+        <div class="project-tags">
+
+            <span>Terraform</span>
+            <span>Infrastructure as Code</span>
+            <span>AWS</span>
+            <span>Azure</span>
+            <span>Automation</span>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =========================================
+    LAB 03 - ZERO TRUST
+    ========================================== -->
+
+    <article class="lab-card">
+
+        <div class="case-study-top">
+
+            <div>
+
+                <span class="project-label">
+                    SECURITY ARCHITECTURE
                 </span>
 
                 <h4>
                     Zero Trust Cloud Architecture
                 </h4>
 
-                <p>
-                    A reference architecture exploring the principle of
-                    "never trust, always verify" using strong identity,
-                    least-privilege access, segmentation, continuous
-                    verification and centralized monitoring.
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>Zero Trust</span>
-                    <span>IAM</span>
-                    <span>RBAC</span>
-                    <span>MFA</span>
-                    <span>Network Security</span>
-
-                </div>
-
             </div>
 
-
-
-            <!-- AWS LANDING ZONE -->
-
-<div class="lab-card">
-
-    <span class="lab-icon">
-        ☁️
-    </span>
-
-    <h4>
-        Secure AWS Landing Zone
-    </h4>
-
-    <p>
-        A secure enterprise AWS foundation using multi-account
-        architecture, centralized identity, governance, networking,
-        logging and organization-wide security guardrails.
-    </p>
-
-    <div class="project-tags">
-
-        <span>AWS</span>
-        <span>Organizations</span>
-        <span>Control Tower</span>
-        <span>SCP</span>
-        <span>IAM</span>
-        <span>Security Hub</span>
-
-    </div>
-
-    <div class="project-actions">
-
-        <a href="/projects/aws-landing-zone/"
-           class="primary project-btn">
-            Explore Architecture →
-        </a>
-
-    </div>
-
-</div>
-
-
-        <!-- PORTFOLIO NOTE -->
-
-        <div class="portfolio-disclaimer">
-
-            <strong>
-                Portfolio Note
-            </strong>
-
-            <p>
-                These case studies and reference architectures are
-                independently recreated and sanitized for learning and
-                portfolio demonstration. They contain no confidential
-                client information, proprietary code, internal architecture,
-                account details or employer assets.
-            </p>
+            <div class="project-number">
+                03
+            </div>
 
         </div>
 
 
-    </div>
+        <p>
+            A reference architecture based on the principle of
+            "never trust, always verify" using strong identity,
+            least-privilege access, segmentation, continuous
+            verification and centralized monitoring.
+        </p>
 
-</section>
-    <!-- =========================
+
+        <div class="project-process">
+
+            <span>Identity</span>
+            <b>→</b>
+            <span>Verify</span>
+            <b>→</b>
+            <span>Authorize</span>
+            <b>→</b>
+            <span>Monitor</span>
+
+        </div>
+
+
+        <div class="project-tags">
+
+            <span>Zero Trust</span>
+            <span>IAM</span>
+            <span>RBAC</span>
+            <span>MFA</span>
+            <span>Network Security</span>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =========================================
+    LAB 04 - AWS LANDING ZONE
+    ========================================== -->
+
+    <article class="lab-card">
+
+        <div class="case-study-top">
+
+            <div>
+
+                <span class="project-label">
+                    ENTERPRISE AWS FOUNDATION
+                </span>
+
+                <h4>
+                    Secure AWS Landing Zone
+                </h4>
+
+            </div>
+
+            <div class="project-number">
+                04
+            </div>
+
+        </div>
+
+
+        <p>
+            A secure enterprise AWS foundation using multi-account
+            architecture, centralized identity, governance, networking,
+            logging and organization-wide security guardrails.
+        </p>
+
+
+        <div class="project-process">
+
+            <span>Organization</span>
+            <b>→</b>
+            <span>Accounts</span>
+            <b>→</b>
+            <span>Guardrails</span>
+            <b>→</b>
+            <span>Security</span>
+
+        </div>
+
+
+        <div class="project-tags">
+
+            <span>AWS</span>
+            <span>Organizations</span>
+            <span>Control Tower</span>
+            <span>SCP</span>
+            <span>IAM</span>
+            <span>Security Hub</span>
+
+        </div>
+
+
+        <div class="project-actions">
+
+            <a href="/projects/aws-landing-zone/"
+               class="primary project-btn">
+                Explore Architecture →
+            </a>
+
+        </div>
+
+    </article>
+
+
+</div>
+<!-- IMPORTANT: LAB GRID ENDS HERE -->
+
+
+<!-- =========================================
+PORTFOLIO NOTE
+========================================= -->
+
+<div class="portfolio-disclaimer">
+
+    <strong>
+        Portfolio Note
+    </strong>
+
+    <p>
+        These case studies and reference architectures are
+        independently recreated and sanitized for learning and
+        portfolio demonstration. They contain no confidential
+        client information, proprietary code, internal architecture,
+        account details or employer assets.
+    </p>
+
+</div>    <!-- =========================
 BLOGS
 ========================= -->
 

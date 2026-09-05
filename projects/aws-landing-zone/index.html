@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AWS Secure Landing Zone Case Study | Tanweer Ahmed</title>
+
+    <meta name="description"
+          content="A portfolio case study demonstrating a secure enterprise AWS Landing Zone using AWS Organizations, IAM Identity Center, Control Tower, SCPs, centralized logging, networking and security services.">
+
+    <link rel="stylesheet" href="/style.css?v=6">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+
+<body>
+
+<div id="stars"></div>
+<div id="cursor-glow"></div>
+
+
+<!-- =========================
+NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">Tanweer Ahmed</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#skills">Skills</a></li>
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#blogs">Blogs</a></li>
+        <li><a href="/#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+PROJECT HERO
+========================= -->
+
+<section class="project-detail-hero">
+
+    <div class="project-detail-container">
+
+        <span class="project-label">
+            ☁ AWS • CLOUD ARCHITECTURE • SECURITY
+        </span>
+
+        <h1>
+            Enterprise AWS
+            <span>Secure Landing Zone</span>
+        </h1>
+
+        <p class="project-detail-lead">
+            A secure and scalable multi-account AWS foundation designed
+            around centralized governance, identity, networking, logging
+            and cloud-security controls.
+        </p>
+
+        <div class="project-tags">
+
+            <span>AWS</span>
+            <span>Organizations</span>
+            <span>Control Tower</span>
+            <span>IAM</span>
+            <span>SCP</span>
+            <span>VPC</span>
+            <span>CloudTrail</span>
+            <span>Security Hub</span>
+            <span>GuardDuty</span>
+            <span>AWS Config</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+PORTFOLIO DISCLAIMER
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <div class="portfolio-disclaimer">
+
+            <strong>
+                Independent & Sanitized Portfolio Case Study
+            </strong>
+
+            <p>
+                This reference architecture is independently created to
+                demonstrate AWS cloud architecture and security concepts.
+                It contains no client architecture, employer information,
+                proprietary code, account details or confidential data.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+BUSINESS PROBLEM
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">01 • THE PROBLEM</span>
+
+        <h2>Scaling AWS Securely Across an Enterprise</h2>
+
+        <p>
+            As organizations increase their use of AWS, operating everything
+            inside a small number of accounts can create challenges around
+            security boundaries, access control, governance, networking,
+            logging and cost ownership.
+        </p>
+
+        <p>
+            A well-designed landing zone establishes the cloud foundation
+            before application teams begin deploying workloads at scale.
+        </p>
+
+
+        <div class="project-question-grid">
+
+            <div class="project-question-card">
+                🏢 How should AWS accounts be organized?
+            </div>
+
+            <div class="project-question-card">
+                🔑 How should workforce access be centrally managed?
+            </div>
+
+            <div class="project-question-card">
+                🛡 How can organization-wide guardrails be enforced?
+            </div>
+
+            <div class="project-question-card">
+                🌐 How should network connectivity be designed?
+            </div>
+
+            <div class="project-question-card">
+                📜 Where should security logs be centralized?
+            </div>
+
+            <div class="project-question-card">
+                🔍 How can security findings be centrally monitored?
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+LANDING ZONE
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">02 • THE FOUNDATION</span>
+
+        <h2>What is an AWS Landing Zone?</h2>
+
+        <p>
+            An AWS Landing Zone provides a structured foundation for
+            operating multiple AWS accounts with consistent security,
+            governance and operational controls.
+        </p>
+
+        <p>
+            Instead of allowing teams to create isolated cloud environments
+            independently, the landing zone establishes common standards for
+            account organization, identity, security, networking and logging.
+        </p>
+
+
+        <div class="wiz-capability-grid">
+
+            <div class="wiz-capability-card">
+                <h3>🏢 Governance</h3>
+                <p>AWS Organizations, organizational units and account structure.</p>
+            </div>
+
+            <div class="wiz-capability-card">
+                <h3>🔑 Identity</h3>
+                <p>Centralized workforce access and permission management.</p>
+            </div>
+
+            <div class="wiz-capability-card">
+                <h3>🌐 Networking</h3>
+                <p>Controlled connectivity between workloads and shared services.</p>
+            </div>
+
+            <div class="wiz-capability-card">
+                <h3>🛡 Security</h3>
+                <p>Centralized visibility, logging, detection and governance.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+ARCHITECTURE
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">03 • ARCHITECTURE</span>
+
+        <h2>Conceptual Multi-Account Architecture</h2>
+
+        <p>
+            The following architecture represents a fictional enterprise
+            AWS environment designed with separation between platform,
+            security and application workloads.
+        </p>
+
+
+        <div class="architecture-preview">
+
+<pre>
+                       AWS ORGANIZATION
+                              │
+                     Management Account
+                              │
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+          ▼                   ▼                   ▼
+      Security OU        Infrastructure OU    Workloads OU
+          │                   │                   │
+     ┌────┴────┐          ┌───┴────┐         ┌────┴────┐
+     │         │          │        │         │         │
+ Log Archive  Security   Network  Shared     Prod      Non-Prod
+  Account     Account    Account  Services  Accounts   Accounts
+     │           │          │        │         │         │
+     │           │          │        │         │         │
+ CloudTrail   GuardDuty   Transit   DNS      VPCs      VPCs
+ Config       Security    Gateway   Shared   Apps      Dev/Test
+ Logs         Hub                   Services
+     │           │
+     └──────┬────┘
+            ▼
+   Central Security Visibility
+
+       Organization-wide Guardrails
+       ─────────────────────────────
+          SCPs • Config • IAM
+</pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+ACCOUNT STRATEGY
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">04 • ACCOUNT STRATEGY</span>
+
+        <h2>Separation of Responsibilities</h2>
+
+        <div class="project-question-grid">
+
+            <div class="project-question-card">
+                <strong>Management Account</strong><br>
+                AWS Organizations and organization-level administration.
+            </div>
+
+            <div class="project-question-card">
+                <strong>Security Account</strong><br>
+                Centralized security administration and findings.
+            </div>
+
+            <div class="project-question-card">
+                <strong>Log Archive Account</strong><br>
+                Protected centralized security and audit logs.
+            </div>
+
+            <div class="project-question-card">
+                <strong>Network Account</strong><br>
+                Shared networking and connectivity services.
+            </div>
+
+            <div class="project-question-card">
+                <strong>Production Accounts</strong><br>
+                Isolated business-critical production workloads.
+            </div>
+
+            <div class="project-question-card">
+                <strong>Non-Production Accounts</strong><br>
+                Development and testing environments.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+GOVERNANCE
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">05 • GOVERNANCE</span>
+
+        <h2>Organization-Wide Security Guardrails</h2>
+
+        <p>
+            Service Control Policies can establish permission boundaries
+            across organizational units and AWS accounts while individual
+            IAM policies continue to control permissions inside each account.
+        </p>
+
+
+        <div class="attack-path-flow">
+
+            <div class="attack-node">
+                🏢
+                <strong>AWS Organization</strong>
+                <small>Central governance</small>
+            </div>
+
+            <div class="attack-arrow">↓</div>
+
+            <div class="attack-node">
+                📁
+                <strong>Organizational Units</strong>
+                <small>Group accounts by purpose</small>
+            </div>
+
+            <div class="attack-arrow">↓</div>
+
+            <div class="attack-node">
+                🛡
+                <strong>Service Control Policies</strong>
+                <small>Organization-level permission guardrails</small>
+            </div>
+
+            <div class="attack-arrow">↓</div>
+
+            <div class="attack-node">
+                🔑
+                <strong>IAM Permissions</strong>
+                <small>Account and workload access</small>
+            </div>
+
+        </div>
+
+
+        <div class="project-insight">
+
+            <strong>Example Guardrails</strong>
+
+            <p>
+                Restrict unauthorized AWS Regions, prevent disabling
+                security services, protect centralized logging resources
+                and limit sensitive administrative operations.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+SECURITY SERVICES
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">06 • SECURITY OPERATIONS</span>
+
+        <h2>Centralized Security Visibility</h2>
+
+        <div class="project-process">
+
+            <span>CloudTrail</span>
+            <b>→</b>
+
+            <span>AWS Config</span>
+            <b>→</b>
+
+            <span>GuardDuty</span>
+            <b>→</b>
+
+            <span>Security Hub</span>
+            <b>→</b>
+
+            <span>Investigation</span>
+            <b>→</b>
+
+            <span>Remediation</span>
+
+        </div>
+
+
+        <div class="project-insight">
+
+            <strong>Security Architecture Principle</strong>
+
+            <p>
+                Security telemetry should be centrally visible while
+                sensitive audit data is stored separately from application
+                workloads. This helps reduce the risk of workload
+                administrators modifying or deleting critical security logs.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+SKILLS
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <span class="section-kicker">07 • SKILLS DEMONSTRATED</span>
+
+        <h2>Cloud Architecture & Security Capabilities</h2>
+
+        <div class="project-question-grid">
+
+            <div class="project-question-card">
+                AWS Multi-Account Architecture
+            </div>
+
+            <div class="project-question-card">
+                AWS Organizations
+            </div>
+
+            <div class="project-question-card">
+                AWS Control Tower
+            </div>
+
+            <div class="project-question-card">
+                Service Control Policies
+            </div>
+
+            <div class="project-question-card">
+                IAM & Identity Architecture
+            </div>
+
+            <div class="project-question-card">
+                Network Architecture
+            </div>
+
+            <div class="project-question-card">
+                Centralized Logging
+            </div>
+
+            <div class="project-question-card">
+                Cloud Security Governance
+            </div>
+
+            <div class="project-question-card">
+                AWS Security Hub
+            </div>
+
+            <div class="project-question-card">
+                Amazon GuardDuty
+            </div>
+
+            <div class="project-question-card">
+                AWS Config
+            </div>
+
+            <div class="project-question-card">
+                CloudTrail
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+NEXT
+========================= -->
+
+<section class="project-detail-section">
+
+    <div class="project-detail-container">
+
+        <div class="project-insight">
+
+            <strong>Next: Infrastructure as Code</strong>
+
+            <p>
+                This architecture can be extended with Terraform-based
+                account provisioning, security controls, networking,
+                centralized logging and automated cloud governance.
+            </p>
+
+        </div>
+
+
+        <div class="project-actions">
+
+            <a href="/#projects"
+               class="primary project-btn">
+                ← Back to Projects
+            </a>
+
+            <a href="https://github.com/shaiktanweer5"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="secondary project-btn">
+                GitHub ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 Tanweer Ahmed • Cloud Architecture & Security
+</footer>
+
+
+<script src="/script.js"></script>
+
+</body>
+
+</html>

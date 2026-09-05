@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AWS to Azure Enterprise Migration Case Study | Tanweer Ahmed
+    </title>
+
+    <meta name="description"
+          content="A sanitized AWS to Microsoft Azure enterprise application migration case study covering discovery, assessment, service mapping, target architecture, Terraform, security, migration and validation.">
+
+    <link rel="stylesheet"
+          href="/style.css?v=6">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<div id="stars"></div>
+<div id="cursor-glow"></div>
+
+
+<!-- =========================================
+NAVIGATION
+========================================= -->
+
+<nav>
+
+    <div class="logo">
+        Tanweer Ahmed
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="/">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="/#about">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="/#skills">
+                Skills
+            </a>
+        </li>
+
+        <li>
+            <a href="/#projects">
+                Projects
+            </a>
+        </li>
+
+        <li>
+            <a href="/#blogs">
+                Blogs
+            </a>
+        </li>
+
+        <li>
+            <a href="/#contact">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================================
+PROJECT HERO
+========================================= -->
+
+<section class="project-detail-hero">
+
+    <div class="section-heading">
+
+        <h5>
+            CLOUD TRANSFORMATION • MULTI-CLOUD ARCHITECTURE
+        </h5>
+
+        <h1>
+            AWS → Azure Enterprise Application Migration
+        </h1>
+
+        <p class="subtitle">
+
+            A sanitized cloud-transformation case study exploring
+            how an enterprise application and its supporting
+            infrastructure can be assessed, redesigned and migrated
+            from Amazon Web Services to Microsoft Azure.
+
+        </p>
+
+    </div>
+
+
+    <div class="project-tags">
+
+        <span>AWS</span>
+        <span>Microsoft Azure</span>
+        <span>Cloud Migration</span>
+        <span>Terraform</span>
+        <span>Networking</span>
+        <span>IAM</span>
+        <span>Entra ID</span>
+        <span>Azure RBAC</span>
+        <span>Cloud Architecture</span>
+
+    </div>
+
+
+    <div class="portfolio-disclaimer">
+
+        <strong>
+            Portfolio Case Study
+        </strong>
+
+        <p>
+
+            This architecture is independently recreated and
+            sanitized for portfolio and learning purposes.
+            It contains no confidential client information,
+            proprietary code, internal architecture diagrams,
+            production credentials, account identifiers or
+            employer assets.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+BUSINESS PROBLEM
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            THE CHALLENGE
+        </h5>
+
+        <h2>
+            Migrating More Than Just Virtual Machines
+        </h2>
+
+        <p class="subtitle">
+
+            Enterprise applications depend on networking,
+            identity, compute, storage, databases, security
+            controls, monitoring and many supporting services.
+
+        </p>
+
+    </div>
+
+
+    <div class="glass-card">
+
+        <h3>
+            Why Cloud-to-Cloud Migration Is Complex
+        </h3>
+
+        <p>
+
+            Moving an application from AWS to Azure is not simply
+            a matter of copying workloads from one cloud platform
+            to another.
+
+        </p>
+
+        <p>
+
+            The existing environment must first be understood,
+            application dependencies identified, cloud services
+            mapped, security requirements evaluated and a suitable
+            Azure target architecture designed.
+
+        </p>
+
+        <p>
+
+            The migration must also consider availability,
+            networking, identity, data movement, observability,
+            Infrastructure as Code and post-migration validation.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+MIGRATION OBJECTIVES
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            MIGRATION OBJECTIVES
+        </h5>
+
+        <h2>
+            What the Target Architecture Should Achieve
+        </h2>
+
+    </div>
+
+
+    <div class="expertise-grid">
+
+
+        <div class="expert-card">
+
+            <h3>
+                ☁️ Cloud Transformation
+            </h3>
+
+            <p>
+
+                Transition application workloads from AWS
+                capabilities to appropriate Microsoft Azure
+                services.
+
+            </p>
+
+        </div>
+
+
+        <div class="expert-card">
+
+            <h3>
+                🔐 Secure Architecture
+            </h3>
+
+            <p>
+
+                Preserve strong identity, network segmentation,
+                encryption and least-privilege access throughout
+                the migration.
+
+            </p>
+
+        </div>
+
+
+        <div class="expert-card">
+
+            <h3>
+                ⚙️ Infrastructure Automation
+            </h3>
+
+            <p>
+
+                Use Infrastructure as Code principles to build
+                repeatable and consistent Azure environments.
+
+            </p>
+
+        </div>
+
+
+        <div class="expert-card">
+
+            <h3>
+                📊 Operational Readiness
+            </h3>
+
+            <p>
+
+                Establish logging, monitoring, validation and
+                operational visibility before production cutover.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+MIGRATION LIFECYCLE
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            MIGRATION LIFECYCLE
+        </h5>
+
+        <h2>
+            End-to-End Migration Approach
+        </h2>
+
+        <p class="subtitle">
+
+            A structured migration process reduces uncertainty
+            and allows architecture, security and operational
+            requirements to be evaluated before cutover.
+
+        </p>
+
+    </div>
+
+
+    <div class="architecture-preview">
+
+<pre>
+              EXISTING AWS ENVIRONMENT
+                       │
+                       ▼
+              Application Discovery
+                       │
+                       ▼
+              Dependency Assessment
+                       │
+                       ▼
+              AWS → Azure Mapping
+                       │
+                       ▼
+              Target Architecture
+                       │
+                       ▼
+               Terraform / IaC
+                       │
+                       ▼
+              Migration Execution
+                       │
+                       ▼
+          Security & Identity Validation
+                       │
+                       ▼
+              Testing & Cutover
+                       │
+                       ▼
+             POST-MIGRATION STATE
+</pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+PHASE 01 DISCOVERY
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            PHASE 01
+        </h5>
+
+        <h2>
+            Discover the Existing AWS Environment
+        </h2>
+
+    </div>
+
+
+    <div class="glass-card">
+
+        <h3>
+            Understand Before Migrating
+        </h3>
+
+        <p>
+
+            Migration planning begins by understanding the
+            existing application and the AWS services supporting it.
+
+        </p>
+
+        <p>
+
+            The discovery process can include compute resources,
+            VPC architecture, security groups, storage,
+            databases, IAM dependencies, DNS, monitoring,
+            load balancing and application communication paths.
+
+        </p>
+
+    </div>
+
+
+    <div class="project-process">
+
+        <span>Application</span>
+        <b>•</b>
+
+        <span>Compute</span>
+        <b>•</b>
+
+        <span>Network</span>
+        <b>•</b>
+
+        <span>Storage</span>
+        <b>•</b>
+
+        <span>Identity</span>
+        <b>•</b>
+
+        <span>Database</span>
+        <b>•</b>
+
+        <span>Dependencies</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+PHASE 02 ASSESSMENT
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            PHASE 02
+        </h5>
+
+        <h2>
+            Assess Application Dependencies
+        </h2>
+
+    </div>
+
+
+    <div class="project-story">
+
+
+        <div class="story-block">
+
+            <span class="story-title">
+                APPLICATION
+            </span>
+
+            <p>
+
+                Understand application components,
+                runtime requirements and communication
+                between services.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-block">
+
+            <span class="story-title">
+                INFRASTRUCTURE
+            </span>
+
+            <p>
+
+                Identify compute, storage, database,
+                networking and supporting cloud services.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-block">
+
+            <span class="story-title">
+                SECURITY
+            </span>
+
+            <p>
+
+                Review identity permissions, network controls,
+                secrets, encryption and security dependencies.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+SERVICE MAPPING
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            PHASE 03
+        </h5>
+
+        <h2>
+            AWS → Azure Service Mapping
+        </h2>
+
+        <p class="subtitle">
+
+            Migration requires understanding the architectural
+            role of each AWS service and selecting an appropriate
+            Azure capability rather than relying only on
+            one-to-one product replacement.
+
+        </p>
+
+    </div>
+
+
+    <div class="migration-map">
+
+        <div>
+
+            <strong>
+                AMAZON WEB SERVICES
+            </strong>
+
+            <span>Amazon VPC</span>
+            <span>Amazon EC2</span>
+            <span>Amazon S3</span>
+            <span>AWS IAM</span>
+            <span>Security Groups</span>
+            <span>Elastic Load Balancing</span>
+            <span>Amazon RDS</span>
+            <span>Amazon CloudWatch</span>
+            <span>Amazon Route 53</span>
+            <span>AWS Secrets Manager</span>
+
+        </div>
+
+
+        <div class="migration-arrow">
+            →
+        </div>
+
+
+        <div>
+
+            <strong>
+                MICROSOFT AZURE
+            </strong>
+
+            <span>Azure Virtual Network</span>
+            <span>Azure Virtual Machines</span>
+            <span>Azure Blob Storage</span>
+            <span>Microsoft Entra ID / Azure RBAC</span>
+            <span>Network Security Groups</span>
+            <span>Azure Load Balancer / Application Gateway</span>
+            <span>Azure SQL / Azure Database Services</span>
+            <span>Azure Monitor</span>
+            <span>Azure DNS</span>
+            <span>Azure Key Vault</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+TARGET AZURE ARCHITECTURE
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            PHASE 04
+        </h5>
+
+        <h2>
+            Design the Target Azure Architecture
+        </h2>
+
+        <p class="subtitle">
+
+            The destination environment should be designed as
+            an Azure architecture rather than simply reproducing
+            the source AWS environment.
+
+        </p>
+
+    </div>
+
+
+    <div class="architecture-preview">
+
+<pre>
+                        USERS
+                          │
+                          ▼
+                    Azure DNS
+                          │
+                          ▼
+              Application Gateway / LB
+                          │
+                          ▼
+               ┌────────────────────┐
+               │ Azure Virtual      │
+               │ Network            │
+               │                    │
+               │  Web / App Tier    │
+               │        │           │
+               │        ▼           │
+               │  Private Services  │
+               └────────┬───────────┘
+                        │
+            ┌───────────┼────────────┐
+            │           │            │
+            ▼           ▼            ▼
+       Azure SQL    Blob Storage   Key Vault
+
+                        │
+                        ▼
+                   Azure Monitor
+                        │
+                        ▼
+               Centralized Visibility
+
+
+             IDENTITY & ACCESS LAYER
+             ───────────────────────
+             Microsoft Entra ID
+                    +
+                Azure RBAC
+</pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+NETWORK ARCHITECTURE
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            NETWORK DESIGN
+        </h5>
+
+        <h2>
+            Secure Connectivity and Segmentation
+        </h2>
+
+    </div>
+
+
+    <div class="project-story">
+
+
+        <div class="story-block">
+
+            <span class="story-title">
+                VIRTUAL NETWORK
+            </span>
+
+            <p>
+
+                Establish Azure VNet address spaces and
+                subnets based on application and security
+                requirements.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-block">
+
+            <span class="story-title">
+                SEGMENTATION
+            </span>
+
+            <p>
+
+                Separate application components and control
+                communication using subnet design and
+                Network Security Groups.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-block">
+
+            <span class="story-title">
+                PRIVATE ACCESS
+            </span>
+
+            <p>
+
+                Where appropriate, reduce unnecessary public
+                exposure and use private connectivity patterns
+                for platform services.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+IDENTITY
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            IDENTITY TRANSFORMATION
+        </h5>
+
+        <h2>
+            AWS IAM → Entra ID & Azure RBAC
+        </h2>
+
+    </div>
+
+
+    <div class="glass-card">
+
+        <p>
+
+            Identity models differ between cloud providers,
+            so permissions should be reassessed during migration
+            rather than copied conceptually from one platform
+            to another.
+
+        </p>
+
+        <p>
+
+            Azure access can be designed around Microsoft
+            Entra ID identities, managed identities,
+            Azure RBAC roles and least-privilege access.
+
+        </p>
+
+    </div>
+
+
+    <div class="project-process">
+
+        <span>Identify Access</span>
+
+        <b>→</b>
+
+        <span>Map Identity</span>
+
+        <b>→</b>
+
+        <span>Define Roles</span>
+
+        <b>→</b>
+
+        <span>Apply RBAC</span>
+
+        <b>→</b>
+
+        <span>Validate Access</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+TERRAFORM
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            INFRASTRUCTURE AS CODE
+        </h5>
+
+        <h2>
+            Building Azure Infrastructure with Terraform
+        </h2>
+
+        <p class="subtitle">
+
+            Infrastructure as Code enables cloud environments
+            to be defined, reviewed and deployed consistently.
+
+        </p>
+
+    </div>
+
+
+    <div class="architecture-preview">
+
+<pre>
+              Terraform Configuration
+                       │
+                       ▼
+                Azure Provider
+                       │
+        ┌──────────────┼──────────────┐
+        │              │              │
+        ▼              ▼              ▼
+   Resource Group     VNet         Security
+        │              │              │
+        ▼              ▼              ▼
+    Compute         Subnets          NSGs
+        │              │
+        └───────┬──────┘
+                ▼
+        Application Platform
+                │
+                ▼
+          Azure Environment
+</pre>
+
+    </div>
+
+
+    <div class="project-tags">
+
+        <span>Terraform</span>
+        <span>Infrastructure as Code</span>
+        <span>AzureRM</span>
+        <span>Modules</span>
+        <span>Variables</span>
+        <span>State Management</span>
+        <span>Automation</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+SECURITY
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            SECURITY
+        </h5>
+
+        <h2>
+            Security Throughout the Migration
+        </h2>
+
+    </div>
+
+
+    <div class="expertise-grid">
+
+
+        <div class="expert-card">
+
+            <h3>
+                🔑 Identity
+            </h3>
+
+            <p>
+
+                Apply least-privilege access using
+                Entra ID, Azure RBAC and managed identities.
+
+            </p>
+
+        </div>
+
+
+        <div class="expert-card">
+
+            <h3>
+                🌐 Network Security
+            </h3>
+
+            <p>
+
+                Use segmentation, NSGs and controlled
+                ingress and egress patterns.
+
+            </p>
+
+        </div>
+
+
+        <div class="expert-card">
+
+            <h3>
+                🔒 Secrets
+            </h3>
+
+            <p>
+
+                Protect application secrets and sensitive
+                configuration using Azure Key Vault.
+
+            </p>
+
+        </div>
+
+
+        <div class="expert-card">
+
+            <h3>
+                📊 Monitoring
+            </h3>
+
+            <p>
+
+                Establish operational and security visibility
+                through Azure Monitor and centralized logging.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+MIGRATION EXECUTION
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            PHASE 05
+        </h5>
+
+        <h2>
+            Migration Execution
+        </h2>
+
+    </div>
+
+
+    <div class="project-process">
+
+        <span>Prepare Azure</span>
+
+        <b>→</b>
+
+        <span>Deploy Infrastructure</span>
+
+        <b>→</b>
+
+        <span>Move Workload</span>
+
+        <b>→</b>
+
+        <span>Transfer Data</span>
+
+        <b>→</b>
+
+        <span>Configure Security</span>
+
+        <b>→</b>
+
+        <span>Test</span>
+
+    </div>
+
+
+    <div class="glass-card">
+
+        <p>
+
+            Migration execution should follow a controlled
+            sequence so that infrastructure, application
+            components, data, connectivity and security
+            controls are validated before production traffic
+            is moved to the new environment.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+VALIDATION
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            PHASE 06
+        </h5>
+
+        <h2>
+            Validation Before Cutover
+        </h2>
+
+    </div>
+
+
+    <div class="project-story">
+
+
+        <div class="story-block">
+
+            <span class="story-title">
+                FUNCTIONAL
+            </span>
+
+            <p>
+
+                Confirm that application functionality
+                behaves as expected in Azure.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-block">
+
+            <span class="story-title">
+                CONNECTIVITY
+            </span>
+
+            <p>
+
+                Validate application communication,
+                DNS, network paths and required dependencies.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-block">
+
+            <span class="story-title">
+                SECURITY
+            </span>
+
+            <p>
+
+                Verify access controls, NSGs,
+                secrets and least-privilege permissions.
+
+            </p>
+
+        </div>
+
+
+        <div class="story-block">
+
+            <span class="story-title">
+                OPERATIONS
+            </span>
+
+            <p>
+
+                Confirm monitoring, logging,
+                alerting and operational visibility.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+CUTOVER
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            CUTOVER
+        </h5>
+
+        <h2>
+            Transitioning to the Azure Environment
+        </h2>
+
+    </div>
+
+
+    <div class="architecture-preview">
+
+<pre>
+        AWS Production Environment
+                   │
+                   ▼
+          Final Synchronization
+                   │
+                   ▼
+            Validation Gate
+                   │
+                   ▼
+             DNS / Traffic
+                Cutover
+                   │
+                   ▼
+          Azure Production
+             Environment
+                   │
+                   ▼
+          Post-Cutover Checks
+                   │
+                   ▼
+              Monitoring
+</pre>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+ROLLBACK
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            MIGRATION RESILIENCE
+        </h5>
+
+        <h2>
+            Rollback Planning
+        </h2>
+
+    </div>
+
+
+    <div class="glass-card">
+
+        <p>
+
+            Production migration planning should include a
+            rollback strategy in case validation identifies
+            critical application, connectivity, data or
+            security issues during cutover.
+
+        </p>
+
+        <p>
+
+            Rollback criteria, decision points and recovery
+            procedures should be established before production
+            traffic is transitioned.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+POST MIGRATION
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            POST-MIGRATION
+        </h5>
+
+        <h2>
+            Optimize After the Move
+        </h2>
+
+    </div>
+
+
+    <div class="project-process">
+
+        <span>Monitor</span>
+
+        <b>→</b>
+
+        <span>Validate</span>
+
+        <b>→</b>
+
+        <span>Optimize</span>
+
+        <b>→</b>
+
+        <span>Harden</span>
+
+        <b>→</b>
+
+        <span>Document</span>
+
+        <b>→</b>
+
+        <span>Operate</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+SKILLS DEMONSTRATED
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            SKILLS DEMONSTRATED
+        </h5>
+
+        <h2>
+            Architecture & Engineering Capabilities
+        </h2>
+
+    </div>
+
+
+    <div class="project-tags">
+
+        <span>AWS Architecture</span>
+        <span>Microsoft Azure</span>
+        <span>Multi-Cloud</span>
+        <span>Cloud Migration</span>
+        <span>Application Discovery</span>
+        <span>Dependency Assessment</span>
+        <span>Service Mapping</span>
+        <span>Azure VNet</span>
+        <span>Network Security Groups</span>
+        <span>Microsoft Entra ID</span>
+        <span>Azure RBAC</span>
+        <span>Terraform</span>
+        <span>Infrastructure as Code</span>
+        <span>Cloud Security</span>
+        <span>Migration Validation</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+KEY TAKEAWAY
+========================================= -->
+
+<section>
+
+    <div class="section-heading">
+
+        <h5>
+            ARCHITECTURE PRINCIPLE
+        </h5>
+
+        <h2>
+            Migration Is an Architecture Exercise
+        </h2>
+
+    </div>
+
+
+    <div class="glass-card">
+
+        <p>
+
+            A successful cloud-to-cloud migration is not simply
+            a transfer of resources.
+
+        </p>
+
+        <p>
+
+            It is an opportunity to reassess application
+            dependencies, redesign infrastructure, improve
+            security controls, introduce automation and build
+            an environment aligned with the destination
+            cloud platform.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+PROJECT ACTIONS
+========================================= -->
+
+<section>
+
+    <div class="project-actions">
+
+        <a href="/#projects"
+           class="primary project-btn">
+
+            ← Back to Projects
+
+        </a>
+
+
+        <a href="https://github.com/shaiktanweer5"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="secondary project-btn">
+
+            GitHub ↗
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+FOOTER
+========================================= -->
+
+<footer>
+
+    © 2026 Tanweer Ahmed • Cloud Architecture & Security
+
+</footer>
+
+
+<script src="/script.js"></script>
+
+</body>
+
+</html>
